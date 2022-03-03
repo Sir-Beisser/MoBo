@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "MoBo": {
+      "main": "src/MoBo/main.mo",
+      "type": "motoko"
+    },
+    "MoBo_assets": {
+      "dependencies": [
+        "MoBo"
+      ],
+      "frontend": {
+        "entrypoint": "src/MoBo_assets/src/index.html"
+      },
+      "source": [
+        "src/MoBo_assets/assets",
+        "dist/MoBo_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
